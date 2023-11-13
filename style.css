@@ -116,22 +116,40 @@ h4 {
   color: #495057;
 }
 
-/* Skills Section */
-#skills ul {
-  padding-left: 20px;
+/* Toggle Section styles */
+#toggle-section {
+  margin-top: 20px;
 }
 
-/* Projects Section */
-#projects .project {
-  margin-bottom: 20px;
+.project-section,
+.skills-section {
+  transition: display 0.3s ease-in-out;
 }
 
-#projects .project h3 {
-  color: #007BFF;
+/* Project Section styles */
+.project-section {
+  display: block;
 }
 
-#projects .project p {
-  color: #495057;
+/* Skills Section styles (Initially Hidden) */
+.skills-section {
+  display: none;
+}
+
+/* Toggle Button styles */
+#toggle-section a {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#toggle-section a:hover {
+  background-color: #0056b3;
 }
 
 /* Contact Section */

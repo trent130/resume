@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lawrence Wafula Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <nav>
@@ -60,29 +62,33 @@
       </ul>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming Languages: JavaScript, Python</li>
-        <li>Web Technologies: HTML, CSS, React</li>
-        <li>Other Skills: Problem Solving, Team Collaboration</li>
-      </ul>
+    <!-- Toggle Section -->
+    <section id="toggle-section">
+      <!-- Projects Section (Initially Visible) -->
+      <div class="project-section" id="project">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Description of Project 1.</p>
+        </div>
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>Description of Project 2.</p>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+
+      <!-- Skills Section (Initially Hidden) -->
+      <div class="skills-section" style="display: none;" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Programming Languages: JavaScript, Python</li>
+          <li>Web Technologies: HTML, CSS, React</li>
+          <li>Other Skills: Problem Solving, Team Collaboration</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Description of Project 1.</p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Description of Project 2.</p>
-      </div>
-      <!-- Add more projects as needed -->
-    </section>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -102,47 +108,61 @@
     </section>
   </div>
 
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission
 
-    // Get form values
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+      // Get form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
 
-    // Construct the data to be sent
-    var data = {
-      name: name,
-      email: email,
-      message: message
-    };
+      // Construct the data to be sent
+      var data = {
+        name: name,
+        email: email,
+        message: message
+      };
 
-    // Send the form data to the server
-    fetch('your-server-script.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      // Handle the response from the server
-      if (data.success) {
-        document.getElementById('response').textContent = 'Message sent successfully!';
-        document.getElementById('contact-form').reset(); // Reset the form
-      } else {
-        document.getElementById('response').textContent = 'Error sending message. Please try again.';
-      }
-    })
-    .catch(function(error) {
-      console.log(error);
-      document.getElementById('response').textContent = 'An error occurred. Please try again later.';
+      // Send the form data to the server
+      fetch('your-server-script.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          // Handle the response from the server
+          if (data.success) {
+            document.getElementById('response').textContent = 'Message sent successfully!';
+            document.getElementById('contact-form').reset(); // Reset the form
+          } else {
+            document.getElementById('response').textContent = 'Error sending message. Please try again.';
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+          document.getElementById('response').textContent = 'An error occurred. Please try again later.';
+        });
     });
-  });
-</script>
+
+    function toggleSection() {
+      const projectsSection = document.querySelector('.project-section');
+      const skillsSection = document.querySelector('.skills-section');
+
+      if (projectsSection.style.display === 'none') {
+        projectsSection.style.display = 'block';
+        skillsSection.style.display = 'none';
+      } else {
+        projectsSection.style.display = 'none';
+        skillsSection.style.display = 'block';
+      }
+    }
+  </script>
 </body>
+
 </html>
