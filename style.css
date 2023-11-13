@@ -1,101 +1,174 @@
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #343a40;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1, h2, h3, h4 {
-    color: #007BFF;
-  }
-  
-  h2, h3, h4 {
-    margin-top: 20px;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  ul li {
-    margin: 0 10px;
-  }
-  
-  /* Education and Experience styles */
-  h2 {
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-  }
-  
-  /* Social media links */
-  ul {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  ul li a {
-    display: inline-block;
-    padding: 10px;
-    color: #ffffff;
-    background-color: #007BFF;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  ul li a:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Email link style */
-  a[href^="mailto:"] {
-    display: inline-block;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  a[href^="mailto:"]:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Education and Experience styles */
-  h3 {
-    color: #007BFF;
-  }
-  
-  h4 {
-    color: #495057;
-  }
-  
-  ul li {
-    margin: 10px 0;
-  }
-  
-  /* Add some spacing to lists */
-  ul li ul li {
-    margin: 5px 0;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+h1, h2, h3, h4 {
+  color: #007BFF;
+}
+
+h2, h3, h4 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+/* Social media links */
+ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #007BFF;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+ul li a:hover {
+  background-color: #0056b3;
+}
+
+/* Email link style */
+a[href^="mailto:"] {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+a[href^="mailto:"]:hover {
+  background-color: #0056b3;
+}
+
+/* Education and Experience styles */
+h2 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #007BFF;
+}
+
+h4 {
+  color: #495057;
+}
+
+/* Skills Section */
+#skills ul {
+  padding-left: 20px;
+}
+
+/* Projects Section */
+#projects .project {
+  margin-bottom: 20px;
+}
+
+#projects .project h3 {
+  color: #007BFF;
+}
+
+#projects .project p {
+  color: #495057;
+}
+
+/* Contact Section */
+#contact {
+  margin-top: 20px;
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #0056b3;
+}
