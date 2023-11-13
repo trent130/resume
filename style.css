@@ -74,12 +74,14 @@ ul li a {
   padding: 10px;
   color: #ffffff;
   background-color: #007BFF;
+  text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
 }
 
 ul li a:hover {
-  background-color: #0056b3;
+  background-color: #334961;
+  color: fuchsia;
 }
 
 /* Email link style */
